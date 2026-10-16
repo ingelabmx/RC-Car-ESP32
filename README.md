@@ -2,7 +2,7 @@
 
 Conversión de un carro RC de juguete (placa original **LC-12RX-2.4G**, control perdido) a un sistema de radio de hobby **FlySky FS-GT3C / FS-GR3E**. La tracción usa un ESC brushed y la dirección es un lazo cerrado controlado por un **Seeed XIAO ESP32-S3** que reutiliza el servo de 5 hilos original del carro.
 
-![Diagrama de conexiones](docs/diagrama_conexiones_xiao.svg)
+![Diagrama de conexiones](docs/diagrama_conexiones_xiao.png)
 
 ---
 
