@@ -25,14 +25,14 @@ Conversión de un carro RC de juguete (placa original **LC-12RX-2.4G**, control 
 
 ```mermaid
 flowchart LR
-    TX[FS-GT3C<br/>transmisor] -. 2.4 GHz AFHDS .-> RX[FS-GR3E<br/>receptor]
-    RX -- CH2 PWM --> ESC[ESC brushed<br/>BDESC-S10E]
-    ESC --> M1[Motor tracción<br/>trasero]
-    ESC --> M2[Motor tracción<br/>delantero]
-    RX -- CH1 PWM --> MCU[XIAO ESP32-S3]
-    POT[Potenciómetro<br/>de dirección] -- posición --> MCU
-    MCU -- PWM + dirección --> DRV[TB6612FNG]
-    DRV --> MD[Motor de<br/>dirección]
+    TX["FS-GT3C<br/>transmisor"] -.->|"2.4 GHz AFHDS"| RX["FS-GR3E<br/>receptor"]
+    RX -->|"CH2 PWM"| ESC["ESC brushed<br/>BDESC-S10E"]
+    ESC --> M1["Motor tracción<br/>trasero"]
+    ESC --> M2["Motor tracción<br/>delantero"]
+    RX -->|"CH1 PWM"| MCU["XIAO ESP32-S3"]
+    POT["Potenciómetro<br/>de dirección"] -->|"posición"| MCU
+    MCU -->|"PWM y sentido"| DRV["TB6612FNG"]
+    DRV --> MD["Motor de<br/>dirección"]
 ```
 
 - **Tracción:** el canal 2 del receptor va directo al ESC. No pasa por el microcontrolador.
